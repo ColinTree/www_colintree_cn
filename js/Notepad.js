@@ -1,0 +1,25 @@
+$(document).ready(function(){
+	$.ajax({
+		async:true,
+		url:'http://appextension.applinzi.com/php/notepad.php',
+		method:'get',
+	}).done(function(response){
+		alertify.success('已加载服务器数据');
+		$('textarea').prop('disabled',false).val(response);
+	}).fail(function(){
+		alertify.error('加载服务器数据失败');
+	});
+	$('form').submit(function(){
+		$.ajax({
+			async:true,
+			url:'http://appextension.applinzi.com/php/notepad.php',
+			method:'post',
+			data:{'text':$('textarea').val()}
+		}).done(function(response){
+			alertify.success('保存成功');
+		}).fail(function(){
+			alertify.error('保存失败');
+		});
+		return false;
+	});
+});
