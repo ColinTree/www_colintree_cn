@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <title>欢迎来到ColinTree.cn</title>
         <style>
             html,body{height:100%;width:100%;margin:0px;font-family:"Microsoft YaHei",微软雅黑,serif;}
-            top,bottom{display:block;width:auto;height:50%;}
-            top>span{font-size:3em;position:absolute;bottom:53%;width:100%;text-align:center;}
-            top{background-color:#cbe6a3;}
-            bottom{vertical-align:top;text-align:center;font-size:110%;}
-            bottom>div{height:6%;}
+            top   {display:block;width:auto;height:50%;background-color:#cbe6a3;font-size:3em;text-align:center;}
+            top span{position:absolute;bottom:53%;width:100%;}
+            bottom{display:block;width:auto;height:50%;background-color:#ffffff;vertical-align:top;text-align:center;font-size:110%;}
+            bottom div{height:6%;}
             a:link,a:visited{color:black;text-decoration:none;font-weight:bold;}
-            a:before{content:"· ";}
+            ul a:before{content:"· ";}
             ul{list-style:none;-webkit-padding-start:0;}
-            ul.hover_list li:hover span{display:inline-block;}
-            ul.hover_list li span{color:#aaa;font-size:80%;display:none;cursor:pointer;}
+            ul li:hover span{display:inline-block;}
+            ul span{color:#aaa;font-size:80%;display:none;cursor:pointer;}
         </style>
     </head>
     <body>
-        <top>
-            <span>欢迎来到ColinTree.cn</span>
-        </top>
+        <top><span>欢迎来到ColinTree.cn</span></top>
         <bottom>
             <div></div>
             这个网站是ColinTree建立在新浪云的个人网站
             <br>
             目前有以下板块
-            <ul class="hover_list">
+            <ul>
                 <li><label><a href="http://www.source-space.cn/">Appinventor 拓展组件</a><span>&lt;-内有个人写的 以及 从部分网站转载 的 教程和文章</span>&nbsp;</label></li>
                 <li><label><a href="http://aizd.source-space.cn/">AI知道</a><span>&lt;-为App inventor建设的在线问答平台</span>&nbsp;</label></li>
                 <li><label><a href="http://tsp.colintree.cn/">TinyWebDB_SAE_PHP (TSP)</a><span>&lt;-在新浪云SAE上搭建廉价AI(或Thunkable)的TinyWebDB(网络微数据库)</span>&nbsp;</label></li>
@@ -33,5 +31,5 @@
                 <li><label><a href="http://colintr.ee/">Colintr.ee</a><span>&lt;-备用主页</span>&nbsp;</label></li>
             </ul>
         </bottom>
-    
-</body></html>
+    </body>
+</html>
