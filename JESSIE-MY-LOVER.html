@@ -14,10 +14,13 @@
 			console.log(Cookie.getCookie('i_love'));
 			if(Cookie.getCookie('i_love')=='babe_jessie'){
 				Cookie.setCookie('i_love','baby_jessie');
+				$('#page0').hide();
 				$('#page1').show();
+				window.title="谨记着 这美好的一切";
 				console.log('show page1');
 			}else{
 				Cookie.setCookie('i_love','babe_jessie');
+				$('#page0').hide();
 				$('#page2').show();
 				window.title="不要问我为什么";
 				console.log('show page2');
@@ -27,7 +30,7 @@
 		<style>
 			html,body{margin:0;font-family:"Microsoft YaHei","微软雅黑",Serif;}
 			/*page0*/
-			div#page0{position:fixed;left:0;right:0;top:0;bottom:0;width:auto;height:auto;z-index:20000120;background-color:white;}
+			div#page0{position:fixed;left:0;right:0;top:0;bottom:0;width:100vw;height:100vh;z-index:20000120;background-color:white;}
 			div#page0 div{text-align:center;}
 			/*page1*/
 			html,body#page1{background-color:pink;}
