@@ -1,0 +1,35 @@
+html,body{
+	width:100%;height:100%;
+	margin:0;
+}
+#form-framework{
+	position:absolute;
+	left:50%;
+	height:70vh;
+	margin-top:-39vh;top:50%;
+	text-align:center;
+}
+#form-framework>form>textarea{
+	height:100%;width:100%;
+	display:block;
+	max-width:100%;
+	resize:none;
+}
+#form-framework>h4{
+	margin:0;
+}
+@media(max-width:600px){
+	#form-framework{
+		width:92vw;
+		margin-left:-46vw;
+	}
+}
+@media(min-width:600px){
+	#form-framework{
+		width:576px;
+		margin-left:-288px;
+	}
+}
+input[type="submit"]{
+	width:100%;
+}
