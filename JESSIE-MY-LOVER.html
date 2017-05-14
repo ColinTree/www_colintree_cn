@@ -30,10 +30,10 @@
 		<style>
 			html,body{margin:0;font-family:"Microsoft YaHei","微软雅黑",Serif;}
 			/*page0*/
-			div#page0{position:fixed;left:0;right:0;top:0;bottom:0;width:100vw;height:100vh;z-index:20000120;background-color:white;}
-			div#page0 div{text-align:center;}
+			#page0{position:absolute;left:0;right:0;top:0;bottom:0;width:100vw;height:100vh;z-index:20000120;background-color:white;}
+			#page0 div{text-align:center;}
 			/*page1*/
-			html,body#page1{background-color:pink;}
+			#page1{background-color:pink;}
 			#page1_left-top{width:100%;height:100%;background-color:#cbe6a3;-webkit-clip-path:polygon(0 0,80% 0,20% 100%,0 100%);clip-path:polygon(0 0,80% 0,20% 100%,0 100%);}
 			#page1_center-heart{position:absolute;top:50%;width:100%;height:100px;margin-top:-50px;text-align:center;}
 			@media(max-width:600px){#page1_center-heart{font-size:12vw;}}
@@ -50,7 +50,7 @@
 			}
 			#page1_bottom{position:absolute;bottom:20px;width:100%;text-align:center;color:white;font-weight:bold;font-size:120%;}
 			/*page2*/
-			body#page2{background-color:#cbe6a3;}
+			#page2{background-color:#cbe6a3;}
 			#page2_center-text{position:absolute;text-align:center;width:100%;top:50%;color:white;font-weight:bold;}
 			#page2_heart-small-square,#heart-big-square,#heart-round-part:before,#heart-round-part:after{background-color:#ffa961;}
 			#page2_heart-small-square,#heart-big-square{position:absolute;text-align:center;left:50%;top:50%;transform:rotate(-45deg);display:inline-block;}
@@ -77,25 +77,27 @@
 			#page2_bottom{position:absolute;bottom:20px;width:100%;text-align:center;color:white;font-weight:bold;font-size:120%;}
 		</style>
 	</head>
-	<body id="page0">
-		<div>对宝贝儿的爱正在加载哈，稍等片刻……</div>
-	</body>
-	<body id="page1" style="diaplay:none;">
-		<div id="page1_left-top"></div>
-		<div id="page1_center-heart">
-			<div id="page1_heart-before">&nbsp;Colin</div>
-			<div id="page1_heart-image"></div>
-			<div id="page1_heart-after">Jessie</div></div>
-		<div id="page1_bottom">Since 19/3/2017</div>
-	</body>
-	<body id="page2" style="diaplay:none;">
-		<div id="page2_heart-round-part"></div>
-		<div id="page2_heart-small-square"></div>
-		<div id="page2_heart-big-square"></div>
-		<div id="page2_center-text">
-			<span>就算是做个网页也是爱你的形状</span><br>
-			<span style="color:yellow;font-size:80%">To <span style="font-weight:normal">Jessie·麦迪尔·小仙女</span></span>
+	<body>
+		<div id="page0">
+			<div>对宝贝儿的爱正在加载哈，稍等片刻……</div>
 		</div>
-		<div id="page2_bottom">Since 19/3/2017</div>
+		<div id="page1" style="diaplay:none;">
+			<div id="page1_left-top"></div>
+			<div id="page1_center-heart">
+				<div id="page1_heart-before">&nbsp;Colin</div>
+				<div id="page1_heart-image"></div>
+				<div id="page1_heart-after">Jessie</div></div>
+			<div id="page1_bottom">Since 19/3/2017</div>
+		</div>
+		<div id="page2" style="diaplay:none;">
+			<div id="page2_heart-round-part"></div>
+			<div id="page2_heart-small-square"></div>
+			<div id="page2_heart-big-square"></div>
+			<div id="page2_center-text">
+				<span>就算是做个网页也是爱你的形状</span><br>
+				<span style="color:yellow;font-size:80%">To <span style="font-weight:normal">Jessie·麦迪尔·小仙女</span></span>
+			</div>
+			<div id="page2_bottom">Since 19/3/2017</div>
+		</div>
 	</body>
 </html>
