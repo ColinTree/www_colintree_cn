@@ -12,4 +12,17 @@ $(document).ready(function(){
 		$('div#form-framework h4 span').text(''+len+' => '+code.length+' ('+percent+'%)');
 		return false;
 	});
+	var if_show=false;//iframe showed
+	$('div#form-framework h4 a').click(function(){
+		if(if_show){
+			if_show=false;
+			$('iframe').hide();
+			$('textarea').css('height','100%');
+		}else{
+			if_show=true;
+			$('iframe').show();
+			$('textarea').css('height','30%');
+		}
+		return false;
+	});
 });
