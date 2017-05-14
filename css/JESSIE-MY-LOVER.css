@@ -13,7 +13,7 @@ html,body{margin:0;font-family:"Microsoft YaHei","微软雅黑",Serif;}
 #page1_center-heart>div{display:inline-block;}
 #page1_heart-before{color:#d97edb;}
 #page1_heart-after{color:yellow;}
-#page1_heart-image{background-image:url("image/HEART.png");background-repeat:round;}
+#page1_heart-image{background-image:url("/image/HEART.png");background-repeat:round;}
 @media(max-width:600px){
 	#page1_heart-image{margin-bottom:-4.3vw;width:18.3vw;height:16.3vw;}
 }
