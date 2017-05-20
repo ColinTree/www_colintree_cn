@@ -1,20 +1,21 @@
 $(document).ready(function(){
 	$.ajax({
 		async:true,
-		url:'http://appextension.applinzi.com/php/notepad.php',
-		method:'get',
+		url:'http://colintreeDB.applinzi.com/tinywebdb/getvalue',
+		method:'post',
+		data:{'tag':'notepad'}
 	}).done(function(response){
 		alertify.success('已加载服务器数据');
-		$('textarea').prop('disabled',false).val(response);
+		$('textarea').prop('disabled',false).val(response[1]);
 	}).fail(function(){
 		alertify.error('加载服务器数据失败');
 	});
 	$('form').submit(function(){
 		$.ajax({
 			async:true,
-			url:'http://appextension.applinzi.com/php/notepad.php',
+			url:'http://colintreeDB.applinzi.com/tinywebdb/storeavalue',
 			method:'post',
-			data:{'text':$('textarea').val()}
+			data:{'tag':'notepad','value':$('textarea').val()}
 		}).done(function(response){
 			alertify.success('保存成功');
 		}).fail(function(){
