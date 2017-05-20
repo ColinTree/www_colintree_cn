@@ -1,4 +1,4 @@
-#goBack{cursor:pointer;color:black;}
+﻿#goBack{cursor:pointer;color:black;}
 #goback:link,#goBack:visited,#goback:hover{text-decoration:underline;}
 hr{border-color:#ccc;margin:14px -4px;}
 a{text-decoration:underline !important;color:black !important;cursor:pointer !important;}
@@ -6,7 +6,7 @@ label{margin:0;font-weight:normal;}
 
 #body{width:900px;margin:10px auto;}
 #header{padding-top:0px;vertical-align:middle;position:absolute;top:0px;width:100%;background-color:#cbe6a3;text-align:center;height:55px;margin-bottom:10px;}
-#header>.btn-group.btn-group-justified{padding-top:10px};
+#header>.btn-group.btn-group-justified{padding-top:7px};
 #title{font-size:27px;height:100%;width:100px;}
 #header .btn-group{width:900px;margin-left:0px;height:100%;}
 #header>div>.btn.btn-default{background-color: transparent;height: 100%;border:0;border-radius:0;border-left:1px black solid;}
