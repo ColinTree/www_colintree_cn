@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$.ajax({
 		async:true,
-		url:'http://colintreeDB.applinzi.com/php/notepad.php',
+		url:'http://colintreeDB.applinzi.com/Notepad/loader',
 		method:'get',
 	}).done(function(response){
 		alertify.success('已加载服务器数据');
