@@ -12,7 +12,7 @@ $(document).ready(function(){
 	$('form').submit(function(){
 		$.ajax({
 			async:true,
-			url:'http://colintreeDB.applinzi.com/php/notepad.php',
+			url:'http://colintreeDB.applinzi.com/Notepad/loader',
 			method:'post',
 			data:{'text':$('textarea').val()}
 		}).done(function(response){
