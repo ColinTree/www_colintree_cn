@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>诶嘿嘿</title>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="//cdn.bootcss.com/alertify.js/0.3.11/alertify.min.js"></script>
+<div>
+    <form>
+        <input id="judge1" type="number" min=0 max=5>
+        <input id="judge2" type="number" min=0 max=5>
+        <input id="judge3" type="number" min=0 max=5>
+        <input id="judge4" type="number" min=0 max=5>
+        <input type="submit" value="算一发">
+    </form>
+</div>
+<script>
+    $(document).ready(function(){
+        $('form').submit(function(){
+            var score=$('#judge1').val()+$('#judge2').val()+$('#judge3').val()+$('#judge4').val();
+            alertify.log('score: '+score);
+            if(score<11){
+                alertify.log('prize: none');
+            }else if(score<14){
+                alertify.log('prize: bronze');
+            }else if(score<17){
+                alertify.log('prize: silver');
+            }else if(score<20){
+                alertify.log('prize: gold');
+            }
+            return false;
+        });
+    });
+</script>
