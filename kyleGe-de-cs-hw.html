@@ -18,7 +18,7 @@
 <script>
     $(document).ready(function(){
         $('form').submit(function(){
-            var score=$('#judge1').val()+$('#judge2').val()+$('#judge3').val()+$('#judge4').val();
+            var score=0+$('#judge1').val()+$('#judge2').val()+$('#judge3').val()+$('#judge4').val();
             alertify.log('score: '+score);
             if(score<11){
                 alertify.log('prize: none');
