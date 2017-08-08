@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            html{
+            	margin:20px;
+            }
+            .thumb {
+                height: 40px;
+                border: 1px solid #000;
+                margin: 10px 5px 0 0;
+            }
+        </style>
+        <script type="text/javascript" src="http://cdn.bootcss.com/jszip/2.6.1/jszip.min.js">//not support 3.x.x</script>
+        <script type="text/javascript" src="./js/templates-builder.js"></script>
+    </head>
+    <body onload="init()">
+        <h1 align="center">生成AppInventor模板库</h1>
+        <p>通过上传图片，添加描述，和aia源代码文件，生成模板并存入模板库。完成的时候，点击下载Zip即可</p>
+        <p>每个模板需要有：<ul>
+            <li>模板名，相当于app的项目名称，全英文不带空格最佳</li>
+            <li>显示名称</li>
+            <li>介绍，描述这个模板aia的内容。允许加入HTML标签</li>
+            <li>截图（可选）</li>
+            <li>图标（可选）</li>
+            <li>AppInventor的代码源文件(.aia)</li>
+        </ul></p>
+        <p>
+            导出后解压放置在服务器，即可完成部署，访问时，直接访问所在的文件夹<br>
+            比如说：我将文件解压至<a href="http://www.colintree.cn/">http://www.colintree.cn/</a>根目录，我只需要在输入模板库地址时访问http://www.colintree.cn/即可<b>（最后面必须要有斜杠）</b><br>
+            如图：<br>
+            <img src="./image/temporaryRepostory.png">
+        </p>
+        <br><br><br>
+        <h2>生成表单</h2>
+        <form id="templateform">
+            <table>
+                <tbody>
+                    <tr>
+                        <td align="right">库中的模板：&nbsp;&nbsp;<br><small>未添加则此下拉框为空&nbsp;&nbsp;&nbsp;</small></td>
+                        <td>
+                        <select id="templates" name=":&quot;Templates" included="" in="" this="" repository"="" onselect="displayTemplate(this.    value)" onchange="displayTemplate(this.value)"> </select>&nbsp;&nbsp;
+                            <button type="button" id="delete" disabled="true" onclick="deleteTemplate()">删除</button>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td align="right">模板名：&nbsp;&nbsp;</td>
+                        <td><input type="text" id="name" size="30"></td>
+                        <td id="previewtable" style="visibility:hidden" bgcolor="#006600" rowspan="9" cellpadding="2">
+                            <table border="1" cellpadding="4" bgcolor="#ffffff">
+                                <tbody>
+                                    <tr>
+                                        <td><output id="preview"></output></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td align="right">显示名称：(40个字符以内)：&nbsp;&nbsp;</td>
+                        <td><input type="text" id="subtitle" size="60"></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td align="right">介绍：&nbsp;&nbsp;</td>
+                        <td><textarea id="desc" rows="4" cols="75"></textarea></td>
+                        <td><output id="descout"></output></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                <!-- The thumbnail and screenshot inputs are used to upload images.  Javascript will return the selected file(s) as a FileList.     In this case, without the 'multiple' attribute, we can only select one file at a time.  -->
+                    <tr>
+                        <td align="right">图标(32×32最佳)&nbsp;&nbsp;</td>
+                        <td>
+                            <input type="file" id="thumbnail" onchange="handleFileSelect(this)"> 
+                            <output id="thumbimg"></output>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td align="right">截图(推荐250×350)&nbsp;&nbsp;</td>
+                        <td>
+                            <input type="file" id="screenshot" onchange="handleFileSelect(this)">
+                            <output id="screenimg"></output>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td align="right">AppInventor源代码文件(.aia)&nbsp;&nbsp;</td>
+                        <td><input type="file" onchange="handleFileSelect(this)" id="zip"></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td align="left" colspan=2>
+                            &nbsp;&nbsp;
+                            <button type="button" onclick="displayPreviewFromEditor()">点此预览</button>
+                            <button type="button" id="resetform" onclick="resetForm()">清空上方表单</button>
+                            &nbsp;&nbsp;
+                            <button type="button" id="template" onclick="saveTemplate()">保存这个模板到模板库中</button>
+                            <button type="button" id="zip" onclick="createZip()">下载Zip</button>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                </tbody>
+            </table>
+        </form>
+        <p>
+            <b>翻译自<a href="http://appinventor.cs.trincoll.edu/csp/templatesbuilder/" target="_blank">http://appinventor.cs.trincoll.edu/csp/templatesbuilder/</a></b>
+        </p>
+    </body>
+</html>
