@@ -1,1 +1,10 @@
-[{"name":"ColinTreeBaiduFanyiTest","subtitle":"BaiduFanyi (translator)","description":"Translator using extension: ColinTreeBaiduFanyi","thumbnail":"BaiduFanyi_Appinventor_Icon.png","screenshot":"aiaRuntimeScreenshot2.png","zip":"BaiduFanyiTest.aia"},]
+[
+    {
+        "name":"ColinTreeBaiduFanyiTest",
+        "subtitle":"百度翻译API",
+        "description":"<p>使用<a href=\"http://aix.colintree.cn/BaiduFanyi\">ColinTreeBaiduFanyi</a>拓展组件的简易翻译软件</p><p><b>注：暂时不适用于广州电教馆服务器</b><br>支持的服务器有：<br><a href=\"http://ai2.appinventor.mit.edu\">MIT官方服务器</a><br><a href=\"http://apptest.gzjkw.net\">广州电教馆测试服务器</a></p>",
+        "thumbnail":"BaiduFanyi_Appinventor_Icon.png",
+        "screenshot":"aiaRuntimeScreenshot2.png",
+        "zip":"BaiduFanyiTest.aia"
+    },
+]
