@@ -24,7 +24,9 @@
 			if(!currentLang){//判断IE浏览器使用语言
 				currentLang = navigator.browserLanguage;
 			}
-			alert(currentLang);
+			if(currentLang!="zh-CN"){
+				window.href="http://www.colintree.cn/index-en.html";
+			}
 		</script>
 	</head>
 	<body>
