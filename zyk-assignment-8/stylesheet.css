@@ -5,12 +5,11 @@ html {
 body {
     margin: 0;
     padding: 0 5% 0 5%;
-    width: 100%;
     background-color: purple;
 }
 #content {
     padding: 20px 0 20px 0;
-    width: 90%;
+    width: 100%;
     background-color: rgb(255, 222, 192);
     text-align: center;
 }
@@ -34,6 +33,12 @@ p {
     margin-left: 10%;
     margin-right: 10%;
     padding: 20px 100px 20px 100px;
+}
+@media screen and (max-width: 650px) { 
+    p {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 div.text {
     display: inline-block;
